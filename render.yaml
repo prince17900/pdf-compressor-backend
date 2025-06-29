@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pdf-compressor-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    region: oregon
+    plan: free
+    runtime: node
+    build:
+      packages:
+        - ghostscript
